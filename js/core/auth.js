@@ -8,19 +8,16 @@ export function switchRole(role) {
     const indicator = document.getElementById('role-indicator');
     const btnTeacher = document.getElementById('btn-login-teacher');
     const btnAdmin = document.getElementById('btn-login-admin');
-    const hint = document.getElementById('first-login-hint');
     if (role === 'teacher') {
         indicator.style.transform = 'translateX(0)';
         btnTeacher.classList.replace('text-gray-400', 'text-blue-600');
         btnAdmin.classList.replace('text-blue-600', 'text-gray-400');
         document.getElementById('username').placeholder = "เลขบัตรประชาชน 13 หลัก";
-        hint.classList.remove('hidden-section');
     } else {
         indicator.style.transform = 'translateX(100%)';
         btnTeacher.classList.replace('text-blue-600', 'text-gray-400');
         btnAdmin.classList.replace('text-gray-400', 'text-blue-600');
         document.getElementById('username').placeholder = "ชื่อผู้ใช้";
-        hint.classList.add('hidden-section');
     }
 }
 
